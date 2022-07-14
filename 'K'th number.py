@@ -22,3 +22,4 @@ def solution(array, commands):
 # answer other people
 def solution(array, commands):
     return list(map(lambda x:sorted(array[x[0]-1:x[1]])[x[2]-1], commands))
+# lambda x에 commands가 들어가서 array의 index를 지정해주고, sorted한 녀석의 index를 지정해줌
