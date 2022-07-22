@@ -14,3 +14,7 @@ def solution(n):
 def water_melon(n):
     s = "수박" * n
     return s[:n]
+
+# 불필요한 메모리 안잡아먹는 code
+def water_melon(n):
+    return "수박"*(n//2) + "수"*(n%2)
