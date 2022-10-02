@@ -80,8 +80,10 @@ def solution(n, arr1, arr2):
         a12=a12.replace('0',' ')
         answer.append(a12)
     return answer
-
-
+# -> zip으로 두 array 묶고, bin함수로 두녀석을 binary로 바꾸고 str로 바꿈. rjust로 옆에부터 결과값을 계속 붙임. 그리고 replace로 1이면 , 0이면 공백으로 변환
+# 불필요한 반복 없이 한꺼번에 arr두개를 처리했음. sota!
 
 # 2
 solution = lambda n, arr1, arr2: ([''.join(map(lambda x: '#' if x=='1' else ' ', "{0:b}".format(row).zfill(n))) for row in (a|b for a, b in zip(arr1, arr2))])
+# zfill() -> 문자열 앞 0으로 채우기
+# zip으로 묶은 다음 그 둘중 하나가 1이라면 #으로 채우기
