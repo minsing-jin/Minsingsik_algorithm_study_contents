@@ -9,7 +9,8 @@ def solution(a, b):
         return D[b%7 + 3]
     else:
         
-        return  D[((sum(n[:a+1])+b-1)%7)] 
+        return  D[((sum(n[:a+1])+b-1)%7)]  -> 여기서부터 index out of range가 걸림
+    
       
       # 어디서 예외가 발생한것이지? 이런거 해결하려면 일일이 다 대입해보고 맞나 틀리나해야함?
       
