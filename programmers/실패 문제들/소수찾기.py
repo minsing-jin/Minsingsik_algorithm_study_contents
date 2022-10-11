@@ -22,8 +22,8 @@ def solution(n):
         
         
     # 값이 True인 숫자를 추려낸다
-    result = []
-    for i in range(2, n):
-        if sieve[i] == True :
-            result.append(i)
-    return len(result)
+#    result = []
+#    for i in range(2, n):
+#        if sieve[i] == True :
+#            result.append(i)
+    return len([i for i in range(2,n) if sieve[i] == True])
