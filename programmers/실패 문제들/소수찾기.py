@@ -27,3 +27,15 @@ def solution(n):
 #        if sieve[i] == True :
 #            result.append(i)
     return len([i for i in range(2,n) if sieve[i] == True])
+
+
+# other sol
+
+
+def solution(n):
+    num=set(range(2,n+1))
+
+    for i in range(2,n+1):
+        if i in num:
+            num-=set(range(2*i,n+1,i))
+    return len(num)
