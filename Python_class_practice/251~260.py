@@ -142,3 +142,6 @@ class OMG :
 
 mystock = OMG()
 mystock.print()      # OMG.print(mystock)
+
+
+문제 출처: https://wikidocs.net/7035
