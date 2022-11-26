@@ -51,5 +51,23 @@ a.set_code("005930")
 print(a.code)
 
 
-# 265 265 메서드
+# 265 메서드
+class Stock:
+    def __init__(self,name, code):
+        self.name = name
+        self.code = code
+    
+    def set_code(self, name):
+        self.name = name
+    
+    def set_code(self, code):
+        self.code = code
+    
+    def get_name(self):
+        return self.name
+    
+    def get_code(self):
+        return self.code
+    
+삼성 = Stock("삼성전자", "005930")
 # 종목명과 종목코드를 리턴하는 get_name, get_code 메서드를 추가하세요. 해당 메서드를 사용하여 종목명과 종목코드를 얻고 이를 출력해보세요.
