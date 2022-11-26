@@ -144,3 +144,5 @@ lst = [삼성전자,현대차,LG전자]
 for i in lst:
     print(f'{i.code} PER: {i.PER}')
 
+    
+# https://wikidocs.net/7036
