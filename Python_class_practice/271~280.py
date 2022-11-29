@@ -26,13 +26,13 @@ class Account:
         num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
         self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-0
         '''
-        Account.acc_cnt += 1
+        Account.acc_cnt += 1    # class변수로 내부에 선언된 변수 / 클래스용 global 변수
 
 
     @classmethod                       # 메서드: class 안의 함수들
     def get_account_num(cls):         # 클래스 메소드 (class method) : cls로 클래스 필드에 접근하는 메소드이며, 정적 메소드처럼 @classmethod라고 메소드 선언 앞에 표기해야 한다.
       print(cls.acc_cnt)          # 클래스 변수:  클래스 내부에 선언된 변수, 일반적인 변수와 동일한 형태
-
+                                  # cls -> 클래스 메소드의 self같은 녀석으로 class변수를 불러올때 사용
 
 
 
@@ -76,18 +76,6 @@ class Account:
       print('계좌번호: ' + self.account_num)
       print("잔고: ", f"{self.balanced:,}")  # f-string에서 : 변수 다음에 : 다음에 콤마를 찍으면 3자리수마다 콤마
       
-      # 실패 코드 다시 시도할것
-      # tmp = str(self.balanced)
-      # cnt = 0
-
-      # for i in tmp:
-      #   if len(tmp) > 3:
-      #     if i%3 == 0:
-      #       tmp = tmp[:i] + ',' + tmp[i:]
-      #       print(tmp)
-      #   else:
-      #     break
-      # print('잔고: ' + tmp + '원')
 
     def deposit_history(self):
       print('입금내역: ',  end = '\n')
