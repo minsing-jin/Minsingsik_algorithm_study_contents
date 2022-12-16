@@ -1,3 +1,23 @@
+# my sol ver 1
+import itertools
+
+def solution(number):
+
+  return len([i for i in list(itertools.combinations(number, 3)) if sum(i) == 0])
+
+# my sol ver 2
+import itertools
+
+def solution(number):
+    tmp = list(itertools.combinations(number, 3))
+    ans = 0
+    for i in tmp:
+        if sum(i) == 0:
+            ans += 1
+    return ans
+
+
+# 해결하지 못한 나의 풀이
 def solution(number):
     
     minus = [i for i in number if i < 0]
@@ -37,17 +57,18 @@ def solution(number):
                 if i + n == 0:
                     z_ans += 1
     
+
     # 4번 case:
     tmp_zero = 0
-    z2_ans = 0
+    
     for i in number:
         if i == 0:
             tmp_zero += 1
+
+    z2_ans = tmp_zero // 3
     
-    z2_ans += tmp_zero // 3
     
-    
-    ans = (p_ans+m_ans)/2 + (z_ans) + z2_ans
+    ans = (p_ans+m_ans)/2 + (z_ans*tmp_zero) + z2_ans
 
 
 
@@ -61,3 +82,13 @@ def solution(number):
 3. 0이 있을경우 음수 양수 같은 숫자가 있어야함
 4. 0만 가지고 있는 경우 혹은 0이 압도적으로 많은 경우
 '''
+
+
+# other sol
+def solution (number) :
+    from itertools import combinations
+    cnt = 0
+    for i in combinations(number,3) :
+        if sum(i) == 0 :
+            cnt += 1
+    return cnt
