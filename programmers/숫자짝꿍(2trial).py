@@ -43,3 +43,45 @@ def solution(X, Y):
   return ''.join(ans)
 
 
+
+
+
+# 2번째 trial
+def solution(X, Y):
+
+    ans = ''
+    tmp = []
+    n = 0
+    for i in X:
+    
+        while True:
+            if n == len(Y) - 1:
+                if i == Y[n]:
+
+                    tmp.append(Y[n])
+                    Y = Y[:n] + Y[n+1:]
+                n = 0
+
+
+                break
+
+
+            if i == Y[n]:
+
+                tmp.append(Y[n])
+                Y = Y[:n] + Y[n+1:]
+                break
+            else:
+                n += 1
+
+
+
+    tmp.sort(reverse = True)
+    
+    if len(tmp) == 0:
+        return '-1'
+    if sum([int(i) for i in tmp]) == 0:
+        return '0'
+
+    return ''.join(tmp)
+
