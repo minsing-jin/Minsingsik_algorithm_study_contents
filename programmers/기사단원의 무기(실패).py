@@ -36,3 +36,7 @@ def solution(number, limit, power):
 
           
     return sum(tmp)
+
+
+
+#  n의 반절이 약수의 중앙값이 되지 않는다 -> 착각!
