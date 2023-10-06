@@ -26,3 +26,4 @@ class 칠판닦이:
 
 
 # https://www.youtube.com/watch?v=vrhIxBWSJ04
+# https://engineer-mole.tistory.com/99
