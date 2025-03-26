@@ -32,8 +32,8 @@ int main() {
 
     sort(word_lst.begin(), word_lst.end(), compare);
 
-    for (int i = 0; i < word_lst.size(); i++) {
-        if (word_lst[i] == word_lst[i - 1]) {	// 같은 단어가 여러 번 입력된 경우에는 한 번씩만 출력
+    for (int i = 0; i < N; i++) {
+        if (i > 0 && word_lst[i] == word_lst[i - 1]) {
             continue;
         }
         cout << word_lst[i] << "\n";
